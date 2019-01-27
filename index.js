@@ -15,10 +15,15 @@ buttonPrimary.addEventListener("click", f => {
     .then(response => response.json())
     .then(result => {
       console.log(result);
-      areaName.innerHTML = `${result.location.name}`;
+      areaName.innerHTML = `${result.location.country}, ${result.location.name}`;
       temp.innerHTML = `${result.current.temp_c}`;
       humidityCond.innerHTML = `${result.current.humidity}`;
-      isDay.innerHTML = `${result.current.is_day}`;
+      
+      if(result.current.is_day === 0){
+        isDay.innerHTML = "Night";
+      }else{
+        isDay.innerHTML = "Day";
+      }
       checkCondition.innerHTML = `${result.current.condition.text}`;
     });
   inpForm.value = "";
