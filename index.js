@@ -4,7 +4,7 @@ var areaName = document.querySelector(".area-name");
 var temp = document.querySelector(".temp-value");
 var humidityCond = document.querySelector(".humidity-value");
 var isDay = document.querySelector(".day-night");
-var conditio = document.querySelector(".area-cond");
+var checkCondition = document.querySelector(".area-cond");
 
 
 buttonPrimary.addEventListener("click", f => {
@@ -19,6 +19,7 @@ buttonPrimary.addEventListener("click", f => {
       temp.innerHTML = `${result.current.temp_c}`;
       humidityCond.innerHTML = `${result.current.humidity}`;
       isDay.innerHTML = `${result.current.is_day}`;
+      checkCondition.innerHTML = `${result.current.condition.text}`;
     });
   inpForm.value = "";
 });
