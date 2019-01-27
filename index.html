@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <!-- style -->
+    <link rel="stylesheet" href="style.css">
+    <!-- milligram assets -->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300italic,700,700italic">
+    <link rel="stylesheet" href="https://cdn.rawgit.com/necolas/normalize.css/master/normalize.css">
+    <link rel="stylesheet" href="https://cdn.rawgit.com/milligram/milligram/master/dist/milligram.min.css">
+    <title>Document</title>
+</head>
+<body>
+    <div class="container">
+        <div class="row">
+            <div class="column column-50">
+                <div class="weather-left">
+                    <h2>Mini Weather Forecast</h2>
+                    <p>Find Your City Weather</p>
+                </div>
+            </div>
+            <div class="column column-50">
+                <div class="weather-right">
+
+                    <div class="form-box">
+                        <label for="text-field">Type Your City Name</label>
+                        <input type="text" class="form-control" placeholder="e.g Dhaka, London" id="text-field">
+                        <button type="submit" class="button-primary">Get Weather</button>
+                    </div>
+                    <ul>
+                        <li><strong>Location:</strong><span class="area-name"></span></li>
+                        <li><strong>Temperature:</strong><span class="temp-value"></span></li>
+                        <li><strong>Humidity:</strong><span class="humidity-value"></span></li>
+                        <li><strong>Day/Night:</strong><span class="day-night"></span></li>
+                        <li><strong>Condition:</strong><span class="area-cond"></span></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="index.js"></script>
+</body>
+</html>
